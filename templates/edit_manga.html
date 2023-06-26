@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Manga</title>
+</head>
+<body>
+    <h1>Editar Manga</h1>
+    <form action="/mangas/{{ manga.id }}/edit" method="POST" enctype="multipart/form-data">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" value="{{ manga.titulo }}" required><br><br>
+        <label for="volumen">Volumen:</label>
+        <input type="number" id="volumen" name="volumen" value="{{ manga.volumen }}" required><br><br>
+        <label for="imagen">Imagen:</label>
+        <input type="file" id="imagen" name="imagen"><br><br>
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

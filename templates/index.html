@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Manga</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Bienvenido a la página de inicio</h1>
+    <p>Contenido protegido. Solo los usuarios registrados pueden ver esto.</p>
+    <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+
+    <h1>Cargar Manga</h1>
+    <form id="mangaForm" action="/mangas" method="POST" enctype="multipart/form-data">
+        <label for="titulo">Título:</label>
+        <input type="text" name="titulo" id="titulo" required><br><br>
+
+        <label for="volumen">Volumen:</label>
+        <input type="number" name="volumen" id="volumen" required><br><br>
+
+        <label for="imagen">Imagen:</label>
+        <input type="file" name="imagen" id="imagen" required><br><br>
+
+        <input type="submit" value="Cargar">
+    </form>
+
+    <h1>Mangas</h1>
+    {% for manga in mangas %}
+    <div class="card">
+        <h2>{{ manga.titulo }}</h2>
+        <p>Volumen: {{ manga.volumen }}</p>
+        <img src="{{ manga.imagen }}" alt="{{ manga.titulo }}" style="max-width: 100%; height: auto;">
+        <form action="/mangas/{{ manga.id }}" method="POST"
+            onsubmit="return confirm('¿Estás seguro de que deseas eliminar este manga?')">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="delete-button">Eliminar</button>
+        </form>
+        <a href="/mangas/{{ manga.id }}/edit" class="edit-button">Editar</a>
+    </div>
+    {% endfor %}
+
+</body>
+
+</html>
