@@ -24,9 +24,9 @@ def index():
 def login():
     if request.method == 'POST':
         # Verificar las credenciales del usuario
-        username = request.form['username']
-        password = request.form['password']
-        if username == 'codo' and password == 'codo':
+        uname = request.form['uname']
+        passwd = request.form['passwd']
+        if uname == 'codo' and passwd == 'codo':
             session['logged_in'] = True
             return redirect(url_for('index'))
         else:
@@ -103,23 +103,31 @@ def delete_manga(id):
 app.config['STATIC_IMAGES'] = 'static/images'
 app.static_folder = 'static'
 
-@app.route("/mangas", methods=['POST'])
-def create_manga():
-    titulo = request.form['titulo']
-    volumen = request.form['volumen']
-    imagen = request.files['imagen']
+@app.route('/cargar_manga', methods=['GET', 'POST'])
+def cargar_manga():
+    if request.method == 'POST':
+        try:
+            titulo = request.form['titulo']
+            volumen = request.form['volumen']
+            imagen = request.files['imagen']
 
-    filename = secure_filename(imagen.filename)
-    image_path = os.path.join("static/images/", filename)
-    imagen.save(image_path)
-    print(image_path)
+            filename = secure_filename(imagen.filename)
+            image_path = os.path.join("static/images/", filename)
+            imagen.save(image_path)
+            print(image_path)
 
-    db_path_img = "http://127.0.0.1:5000/" + image_path   ###CAMBIAR PATH A HOST FINAL###
-    nuevo_manga = Manga(titulo, volumen, db_path_img)
-    db.session.add(nuevo_manga)
-    db.session.commit()
+            db_path_img = "http://127.0.0.1:5000/" + image_path   ###CAMBIAR PATH A HOST FINAL###
+            nuevo_manga = Manga(titulo, volumen, db_path_img)
+            db.session.add(nuevo_manga)
+            db.session.commit()
 
-    return redirect(url_for('index'))
+            return redirect(url_for('index'))
+        except KeyError as e:
+            error_message = f"Error: Campo '{e.args[0]}' no encontrado en la solicitud."
+            return render_template('error.html', error_message=error_message)
+    else:
+        return render_template('cargar_manga.html')
+    
 
 # Modificar un manga.
 @app.route("/mangas/<int:id>/edit", methods=['GET', 'POST'])

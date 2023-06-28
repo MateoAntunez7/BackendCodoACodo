@@ -1,0 +1,498 @@
+@media screen and (max-width: 639.98px) {
+  
+  main {
+    height: fit-content;
+  }
+
+  .linea {
+    animation: none !important;
+  }
+
+  #sections1y2 {
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+
+  }
+
+  #divSection1 {
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  #divSection1>h3 {
+    padding-top: 2rem;
+  }
+
+  #divSection1>p {
+    font-size: 1.2rem;
+  }
+
+  #section1 {
+    box-sizing: border-box;
+    height: fit-content;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 2rem;
+    padding-top: 4rem;
+  }
+
+  #section2 {
+    padding: 0;
+    margin: 0;
+  }
+
+  #divSection2 {
+    margin: 0;
+  }
+
+  .parifr {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  .iframeSection2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  #h3Openings {
+    margin: 0;
+  }
+
+  .arcos {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .arcos>h3 {
+    margin: 0;
+  }
+
+  #arcos-content {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    justify-content: center;
+    row-gap: 1rem;
+    padding: 0;
+  }
+
+  #arcos-content>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  #arcos-content>div p {
+    font-weight: normal;
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  #arcos-content>div img {
+    width: 100%;
+  }
+
+  .testimonios {
+    height: fit-content;
+    margin: 0;
+  }
+
+  .h2Testimonio {
+    margin: 0;
+    padding-top: 1rem;
+  }
+
+  .divTestimonio>img {
+    padding: 1rem 1rem;
+  }
+
+  .divTestimonio>p {
+    padding: 1rem 0 1rem;
+  }
+
+  .formulario {
+    padding: 0;
+  }
+
+  #formulario {
+    overflow: scroll;
+  }
+
+  #divFormulario {
+    width: 100%;
+    height: fit-content;
+    border: 0px;
+  }
+
+  #divFormulario img {
+    display: none;
+  }
+
+  #divFormulario2 {
+    width: 100%;
+    padding: 1rem 0 1rem;
+    border: 1px solid black;
+  }
+
+  #divFormulario2 h2 {
+    font-size: 2rem;
+  }
+
+  #divFormulario2 p {
+    font-size: 1.5rem;
+    padding: 1rem 0 1rem;
+  }
+
+  #form_contacto input {
+    font-size: 1.5rem;
+    height: fit-content;
+    padding: 1rem 0 1rem;
+  }
+
+  #email {
+    font-size: 1rem !important;
+  }
+
+  #boton {
+    background-color: rgba(255, 51, 0, 1);
+  }
+
+  .nav_items {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    background-color: rgba(255, 51, 0, 0.98);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    transform: translateX(-100%);
+    transition: 0.3s ease all;
+  }
+
+  .nav_items a {
+    text-align: center;
+  }
+
+  .liHeader:hover {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .nav_toggle {
+    display: flex !important;
+    flex-direction: column;
+    margin: 15px;
+  }
+
+  .nav_toggle span {
+    width: 30px;
+    height: 4px;
+    background-color: #f2f2f2;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transform-origin: 5px 0px;
+    transition: all 0.2s linear;
+  }
+
+  .close span {
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+
+  .close span:nth-child(2) {
+    display: none;
+  }
+
+  .close span:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px, 1px);
+  }
+
+  .open {
+    transform: translateX(0);
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .centro {
+    margin-top: 10px;
+  }
+
+  .equipo p,
+  .juego p {
+    display: none;
+  }
+
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 991.98px) {
+  .linea {
+    animation: none !important;
+  }
+
+  main {
+    display: flex;
+    height: fit-content;
+  }
+
+  #sections1y2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0 1rem;
+    margin: 0;
+  }
+
+  #section1 {
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+  }
+
+  #divSection1 {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 1rem;
+    margin: 0;
+  }
+
+  #section2 {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 2rem 0 0 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #divSection2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  #h3Openings {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  #verEn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .parifr {
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+  }
+
+  .iframeSection2 {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .arcos {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #arcos-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #arcos-content>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  #arcos-content>div img {
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  #arcos-content>div p {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  .formulario {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+  }
+
+  #divFormulario {
+    width: 100%;
+    height: fit-content;
+    padding: 15rem 0 15rem;
+  }
+
+  #divFormulario img {
+    display: none;
+  }
+
+  #divFormulario2 {
+    height: fit-content;
+    padding: 2rem 0 2rem;
+
+  }
+
+  #divFormulario2 p {
+    padding: 2rem 0 2rem;
+  }
+
+  #form_contacto p {
+    padding: 1rem 0 1rem;
+  }
+
+  #email,
+  #boton {
+    height: fit-content;
+    padding: 0.6rem 0 0.6rem;
+    font-size: 1.2rem;
+  }
+
+ .nav_items {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    background-color: rgba(255, 51, 0, 0.98);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    transform: translateX(-100%);
+    transition: 0.3s ease all;
+  }
+
+  .nav_items a {
+    text-align: center;
+  }
+
+  .liHeader:hover {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .nav_toggle {
+    display: flex !important;
+    flex-direction: column;
+    margin: 15px;
+  }
+
+  .nav_toggle span {
+    width: 30px;
+    height: 4px;
+    background-color: #f2f2f2;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transform-origin: 5px 0px;
+    transition: all 0.2s linear;
+  }
+
+  .close span {
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+
+  .close span:nth-child(2) {
+    display: none;
+  }
+
+  .close span:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px, 1px);
+  }
+
+  .open {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1365.98px) {
+  main {
+    height: fit-content;
+    padding: 5rem 0 1.5rem;
+  }
+
+  #sections1y2 {
+    flex-direction: column;
+    padding: 0 1rem 0 1rem;
+    margin: 0;
+    height: fit-content;
+  }
+
+  #divSection1 {
+    width: fit-content;
+    padding-bottom: 1rem;
+  }
+
+  #section1 {
+    padding: 0;
+  }
+
+  #section2 {
+    padding: 2rem 0 0 0;
+    margin: 0;
+  }
+
+  .arcos {
+    margin: 0;
+    padding: 0;
+  }
+
+  #arcos-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  #arcos-content>div p {
+    font-size: 1.4rem;
+    font-weight: normal;
+    padding-bottom: 1rem;
+  }
+
+  .divTestimonio p {
+    font-size: 1.4rem;
+  }
+
+  #divFormulario {
+    width: fit-content;
+    border: 1px black solid !important;
+  }
+
+  #email,
+  #boton {
+    height: fit-content;
+    padding: 0.6rem 0 0.6rem;
+    font-size: 1.2rem;
+  }
+}

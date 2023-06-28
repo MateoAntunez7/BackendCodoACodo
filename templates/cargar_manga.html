@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/cargaDatos.css') }}">
+    <title>Carga de datos de Manga</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="indicators" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner" role="listbox">
+
+                <div class="carousel-item active" style="background-image: url('{{ url_for('static', filename='images/1028609.png') }}')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-4">Carga De Datos</h2>
+                        <p class="para">¡Por favor carga los datos correspondientes!</p>
+                    </div>
+                </div>
+
+    </header>
+
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        <h1 class="text-center">Carga de Datos de Manga</h1>
+
+        <form>
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese el título del manga" required>
+            </div>
+
+            <div class="form-group">
+                <label for="volumen">Número de Volumen:</label>
+                <input type="number" class="form-control" id="volumen" placeholder="Ingrese el número de volumen" name="volumen" required>
+            </div>
+
+            <div class="form-group">
+                <label for="imagen">Imagen:</label>
+                <input type="file" class="form-control-file" id="imagen" name="imagen">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Cargar</button>
+            <a href="{{ url_for('index') }}" class="btn btn-primary">Volver</a>
+
+        </form>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
