@@ -11,7 +11,7 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/cargaDatos.css') }}">
-    <title>Edit de datos de Manga</title>
+    <title>Carga de datos de Manga</title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
 
 
     <form action="/mangas/{{ manga.id }}/edit" method="POST" enctype="multipart/form-data">
-        <h1 class="text-center" style="margin-top: 50px;">Modificar Datos de Manga</h1>
+        <h1 class="text-center mt-5">Modificar Datos de Manga</h1>
 
         <form>
             <div class="form-group mx-5">
@@ -50,12 +50,13 @@
                 <input type="file" class="form-control-file" id="imagen" name="imagen">
             </div>
 
-            <button type="submit" class="btn btn-primary ml-5 mb-5">Cargar</button>
-            <a href="{{ url_for('index') }}" class="btn btn-primary ml-2 mb-5">Volver</a>
+            <button type="submit" class="btn btn-primary ml-5 mb-5" onclick="modificar()">Cargar</button>
+            <a href="{{ url_for('index') }}" class="btn btn-primary mb-5">Volver</a>
         </form>
     </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../static/scripts/editar_mangas.js"></script>
 </body>
 
 </html>

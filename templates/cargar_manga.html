@@ -27,12 +27,13 @@
                         <p class="para">¡Por favor carga los datos correspondientes!</p>
                     </div>
                 </div>
+            </div>            
 
     </header>
 
 
     <form action="" method="POST" enctype="multipart/form-data">
-        <h1 class="text-center" style="margin-top: 50px;">Carga de Datos de Manga</h1>
+        <h1 class="text-center mt-5">Carga de Datos de Manga</h1>
 
         <form>
             <div class="form-group mx-5">
@@ -50,13 +51,14 @@
                 <input type="file" class="form-control-file" id="imagen" name="imagen">
             </div>
 
-            <button type="submit" class="btn btn-primary ml-5 mb-5">Cargar</button>
-            <a href="{{ url_for('index') }}" class="btn btn-primary ml-2 mb-5">Volver</a>
+            <button type="submit" class="btn btn-primary ml-5 mb-5" onclick="guardar()">Cargar</button>
+            <a href="{{ url_for('index') }}" class="btn btn-primary mb-5">Volver</a>
 
         </form>
     </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../static/scripts/cargar_mangas.js"></script>
 </body>
 
 </html>
