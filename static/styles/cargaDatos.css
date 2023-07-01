@@ -9,6 +9,7 @@ body {
   
   .form-group {
     margin-bottom: 20px;
+    margin-left: 0 50px 0 50px !important;
   }
   
   label {

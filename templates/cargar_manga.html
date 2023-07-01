@@ -32,26 +32,26 @@
 
 
     <form action="" method="POST" enctype="multipart/form-data">
-        <h1 class="text-center">Carga de Datos de Manga</h1>
+        <h1 class="text-center" style="margin-top: 50px;">Carga de Datos de Manga</h1>
 
         <form>
-            <div class="form-group">
+            <div class="form-group mx-5">
                 <label for="titulo">Título:</label>
                 <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese el título del manga" required>
             </div>
 
-            <div class="form-group">
+            <div class="form-group mx-5">
                 <label for="volumen">Número de Volumen:</label>
                 <input type="number" class="form-control" id="volumen" placeholder="Ingrese el número de volumen" name="volumen" required>
             </div>
 
-            <div class="form-group">
+            <div class="form-group mx-5">
                 <label for="imagen">Imagen:</label>
                 <input type="file" class="form-control-file" id="imagen" name="imagen">
             </div>
 
-            <button type="submit" class="btn btn-primary">Cargar</button>
-            <a href="{{ url_for('index') }}" class="btn btn-primary">Volver</a>
+            <button type="submit" class="btn btn-primary ml-5 mb-5">Cargar</button>
+            <a href="{{ url_for('index') }}" class="btn btn-primary ml-2 mb-5">Volver</a>
 
         </form>
     </div>
