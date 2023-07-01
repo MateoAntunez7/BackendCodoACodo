@@ -48,6 +48,7 @@
         <hr>
         <div class="row">
             {% for manga in mangas %}
+            <tr v-for = "manga in mangas" class="">   
             <div class="col-md-4">
                 <figure class="card card-product">
                     <div class="img-wrap"><img src="{{ manga.imagen }}" alt="{{ manga.titulo }}"></div>
@@ -60,15 +61,15 @@
                         <form action="/mangas/{{ manga.id }}" method="POST"
                             onsubmit="return confirm('¿Estás seguro de que deseas eliminar este manga?')">
                             <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="btn btn-sm btn-danger float-right delete-button">Eliminar</button>
+                            <button type="submit" class="btn btn-sm btn-danger float-right delete-button" v-on:click="eliminar(manga.id)">Eliminar</button>
                         </form>
-                        <a href="/mangas/{{ manga.id }}/edit" class="btn btn-sm btn-warning float-right">Modificar</a>
+                        <a href="/mangas/{{ manga.id }}/edit" class="btn btn-sm btn-warning float-right" v-on:click="editar">Modificar</a>
                     </div> <!-- bottom-wrap.// -->
                 </figure>
             </div> <!-- col // -->
-            {% endfor %}
+            {% endfor %} </tr>
         </div> <!-- row.// -->
-
+    
 
 
     </div>
@@ -99,6 +100,8 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../static/scripts/mangas.js"></script>
 </body>
 
 </html>

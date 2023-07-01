@@ -27,6 +27,7 @@
                         <p class="para">¡Por favor carga los datos correspondientes!</p>
                     </div>
                 </div>
+            </div>            
 
     </header>
 
@@ -50,13 +51,14 @@
                 <input type="file" class="form-control-file" id="imagen" name="imagen">
             </div>
 
-            <button type="submit" class="btn btn-primary">Cargar</button>
+            <button type="submit" class="btn btn-primary" onclick="guardar()">Cargar</button>
             <a href="{{ url_for('index') }}" class="btn btn-primary">Volver</a>
 
         </form>
     </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../static/scripts/cargar_mangas.js"></script>
 </body>
 
 </html>
